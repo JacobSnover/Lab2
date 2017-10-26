@@ -48,13 +48,14 @@ namespace Lab2
 
 
                 }
-                if (value % 2 != 0)
+                if (value % 2 != 0 && value > 60)
                 {
-
-                    Console.WriteLine($"Thank you {name}, {value} is an odd number. ");
-
+                    Console.WriteLine($"Thank you {name}, {value} is and odd number. ");
                 }
-
+                else if (value % 2 != 0)
+                {
+                    Console.WriteLine($"Thank you {name}, that is an odd number. ");
+                }
 
                 while (true)
                 {
@@ -68,10 +69,11 @@ namespace Lab2
                     }
                     else if (test == "n" || test == "no")
                     {
-                        
+                        Console.WriteLine("Bye");
+                        Console.ReadLine();
                         Environment.Exit(1);
                     }
-                    
+
                 }
                 continue;
             }
